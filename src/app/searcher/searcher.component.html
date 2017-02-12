@@ -1,3 +1,5 @@
-<p>
-  searcher works!
-</p>
+<div class="flex-container" fxLayout="row" fxLayoutAlign="center center">    
+<md-input-container fxFlex="80%">
+    <input md-input placeholder="Titulo" [(ngModel)]="typing" (keyup)="onKey($event)">
+</md-input-container>
+</div>

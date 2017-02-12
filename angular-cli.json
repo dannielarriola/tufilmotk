@@ -19,7 +19,7 @@
       "tsconfig": "tsconfig.json",
       "prefix": "tf",
       "styles": [
-        "styles.css"
+        "styles.scss"
       ],
       "scripts": [],
       "environments": {
