@@ -12,13 +12,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainTitleComponent } from './main-title/main-title.component';
 
 import { FormsModule } from '@angular/forms';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearcherComponent,
     ToolbarComponent,
-    MainTitleComponent
+    MainTitleComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

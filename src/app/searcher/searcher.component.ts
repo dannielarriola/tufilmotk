@@ -1,17 +1,19 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { DbService } from '../db.service';
 import * as _ from 'lodash';
 
 @Component({
   selector: 'tf-searcher',
   templateUrl: './searcher.component.html',
-  styleUrls: ['./searcher.component.css']
+  styleUrls: ['./searcher.component.css'],
+  providers: [DbService ]
 })
 export class SearcherComponent implements OnInit {
   datajson = {};
   errorMessage: string;
   static typing = '';
   static result = [];
+  dataloaded = false;
 
   constructor(private dbservice: DbService) { }
 
@@ -22,27 +24,26 @@ export class SearcherComponent implements OnInit {
   getData() {
     this.dbservice.getData()
       .subscribe(
-      datajson => this.datajson = datajson,
+      datajson => { this.datajson = datajson; this.dataloaded = true },
       error => this.errorMessage = <any>error
       );
   }
 
-  onKey(event: KeyboardEvent) { // with type info
+  onKey(event: KeyboardEvent) {
     SearcherComponent.result = [];
     var count = 1;
-    _.forEach(this.datajson, function (item) {
-      if (count < 100) {
-        //console.log(item);
-        if (item.title.toLowerCase().indexOf(SearcherComponent.typing) !== -1 ||
-          item.title_english.toLowerCase().indexOf(SearcherComponent.typing) !== -1 ||
-          item.title_long.toLowerCase().indexOf(SearcherComponent.typing) !== -1 ||
-          item.imdb_code.toLowerCase().indexOf(SearcherComponent.typing) !== -1 ||
-          item.title_english.toLowerCase().indexOf(SearcherComponent.typing) !== -1 ||
-          item.year.toString() == SearcherComponent.typing
+    var txtSearch = SearcherComponent.typing.toLowerCase();
+    _.forEach(this.datajson, function (item: any) {
+      if (count < 100 && txtSearch.length >= 2) {
+        if (item.title.toLowerCase().indexOf(txtSearch) !== -1 ||
+          item.title_english.toLowerCase().indexOf(txtSearch) !== -1 ||
+          item.title_long.toLowerCase().indexOf(txtSearch) !== -1 ||
+          item.imdb_code.toLowerCase().indexOf(txtSearch) !== -1 ||
+          item.title_english.toLowerCase().indexOf(txtSearch) !== -1 ||
+          item.year.toString() == txtSearch
         ) {
           SearcherComponent.result.push(item);
           count++;
-          console.log(SearcherComponent.result);
         }
       } else {
         return false;
@@ -50,4 +51,5 @@ export class SearcherComponent implements OnInit {
     });
   }
 
+  SearcherComponent = SearcherComponent;
 }

@@ -9,7 +9,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 $tf-app-primary: md-palette($md-teal);
-$tf-app-accent:  md-palette($md-blue-grey, A200, A100, A400);
+$tf-app-accent:  md-palette($md-deep-orange, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $tf-app-warn:    md-palette($md-red);

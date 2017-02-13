@@ -6,11 +6,11 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DbService {
-  private datajson = 'movies.json'; 
+  private urljson = 'movies.json'; 
   constructor(private http: Http) { }
 
   getData() : Observable<any>{
-    return this.http.get(this.datajson)
+    return this.http.get(this.urljson)
                     .map(this.extractData)
                     .catch(this.handleError);
   }
