@@ -2,10 +2,6 @@ md-input-container{
     font-size: 1.5rem;
 }
 
-.md-input-underline .md-input-ripple {
-  border-color: $blue-color;
-}
-
 md-spinner{
     margin: 0 auto;
 }

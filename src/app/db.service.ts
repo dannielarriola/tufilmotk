@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DbService {
-  private urljson = 'movies.json'; 
+  private urljson = 'movies.json?v=1.1'; 
   constructor(private http: Http) { }
 
   getData() : Observable<any>{
