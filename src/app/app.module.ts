@@ -9,27 +9,33 @@ import { SearcherComponent } from './searcher/searcher.component';
 import { MaterialModule } from '@angular/material';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MainTitleComponent } from './main-title/main-title.component';
 
 import { FormsModule } from '@angular/forms';
 import { ResultComponent } from './result/result.component';
+import { InfoComponent } from './info/info.component';
+
+import { routing } from './app.routes';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearcherComponent,
     ToolbarComponent,
-    MainTitleComponent,
-    ResultComponent
+    ResultComponent,
+    InfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     MaterialModule.forRoot(),
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [DbService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: []
 })
 export class AppModule { }

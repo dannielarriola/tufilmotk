@@ -1,5 +1,6 @@
 <section class='container'>
 <md-card fxFlex="23%" fxFlex.xs="98%" *ngFor="let item of SearcherComponent.result">
+  <a routerLink="/info/{{item.slug}}/{{item.id}}">
   <md-card-header>
     <md-card-title>{{item.title.substr(0,20)}}</md-card-title>
   </md-card-header>
@@ -18,5 +19,6 @@
     </md-menu>
     <span class="rating" md-button disabled>{{item.rating}}</span>
   </md-card-actions>
+  </a>
 </md-card>
 </section>
