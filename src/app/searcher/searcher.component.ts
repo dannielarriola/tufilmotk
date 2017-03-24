@@ -53,3 +53,4 @@ export class SearcherComponent implements OnInit {
 
   SearcherComponent = SearcherComponent;
 }
+

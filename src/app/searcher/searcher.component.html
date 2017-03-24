@@ -1,6 +1,6 @@
 <md-spinner *ngIf="!dataloaded"></md-spinner>
 <div *ngIf="dataloaded" class="flex-container" fxLayout="row" fxLayoutAlign="center center">
     <md-input-container fxFlex="80%">
-        <input md-input placeholder="Titulo" [(ngModel)]="SearcherComponent.typing" (keyup)="onKey($event)">
+        <input mdInput placeholder="Titulo" [(ngModel)]="SearcherComponent.typing" (keyup)="onKey($event)">
     </md-input-container>
 </div>

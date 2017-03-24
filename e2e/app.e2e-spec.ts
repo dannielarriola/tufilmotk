@@ -1,10 +1,10 @@
-import { TufilmotkPage } from './app.po';
+import { TestCling2Page } from './app.po';
 
-describe('tufilmotk App', function() {
-  let page: TufilmotkPage;
+describe('test-cling2 App', () => {
+  let page: TestCling2Page;
 
   beforeEach(() => {
-    page = new TufilmotkPage();
+    page = new TestCling2Page();
   });
 
   it('should display message saying app works', () => {

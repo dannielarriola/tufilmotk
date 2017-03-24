@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class TufilmotkPage {
+export class TestCling2Page {
   navigateTo() {
     return browser.get('/');
   }
