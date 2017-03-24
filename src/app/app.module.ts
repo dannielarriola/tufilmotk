@@ -35,7 +35,6 @@ import { HomeComponent } from './home/home.component';
     routing
   ],
   providers: [DbService],
-  bootstrap: [AppComponent],
-  entryComponents: []
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

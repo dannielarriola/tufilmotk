@@ -25,8 +25,17 @@ $tf-app-theme: md-light-theme($tf-app-primary, $tf-app-accent, $tf-app-warn);
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background: lightgray;
 }
 
 .center{
     text-align: center;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.clear{
+  clear:both;
 }

@@ -16,9 +16,9 @@ export class DbService {
   }
 
   private extractData(res: Response) {
-    console.log(res.json());
     return res.json() || { };
   }
+  
   private handleError (error: Response | any) {
     let errMsg: string;
     if (error instanceof Response) {

@@ -1,2 +1,63 @@
-<h1>{{title}}</h1>
-<p>{{id}}</p>
+<section class="container">
+    <md-card>
+        <md-card-header>
+            <md-card-title>
+                <h1>{{InfoComponent.info.title}}</h1>
+            </md-card-title>
+            <div class="download" mdTooltip="descargar">            
+            <a md-mini-fab class="descargas" [mdMenuTriggerFor]="menu">
+                <md-icon>add</md-icon>
+            </a>
+            <md-menu #menu="mdMenu">
+                <a md-menu-item *ngFor="let torrent of InfoComponent.info.torrents" href="{{torrent.url}}">
+                    <md-icon>file_download</md-icon>
+                    <span>Torrent {{torrent.quality}}</span>
+                </a>
+                <a md-menu-item href='//www.yifysubtitles.com/movie-imdb/{{InfoComponent.info.imdb_code}}' target='_blank'>
+                    <md-icon>subject</md-icon>
+                    <span>Subtitulo</span>
+                </a>
+                <a md-menu-item href='//www.youtube.com/watch?v={{InfoComponent.info.yt_trailer_code}}' target='_blank'>
+                    <md-icon>movie</md-icon>
+                    <span>Trailer</span>
+                </a>
+                <a md-menu-item href='http://www.imdb.com/title/{{InfoComponent.info.imdb_code}}' target='_blank'>
+                    <md-icon>movie</md-icon>
+                    <span>Imdb</span>
+                </a>
+            </md-menu>
+            </div>
+        </md-card-header>
+        <img class="mainimg" src="{{InfoComponent.info.medium_cover_image}}" alt="{{InfoComponent.info.title}}" fxFlex="40%" fxFlex.xs="100%">
+        <aside class="info" fxFlex="60%" fxFlex.xs="100%">
+            <md-list>
+                <md-list-item>
+                    <md-icon md-list-avatar>star_rate</md-icon>
+                    <p>{{InfoComponent.info.rating}}</p>
+                </md-list-item>
+                <md-list-item>
+                    <md-icon md-list-avatar>date_range</md-icon>
+                    <p>{{InfoComponent.info.year}}</p>
+                </md-list-item>
+                <md-list-item>
+                    <md-icon md-list-avatar>watch_later</md-icon>
+                    <p>{{InfoComponent.info.runtime}} min</p>
+                </md-list-item>
+                <div class="chips">        
+                    <md-chip-list>
+                        <md-chip *ngFor="let generos of InfoComponent.info.genres">{{generos}}</md-chip>
+                    </md-chip-list>
+                </div>
+            </md-list>            
+        </aside>
+        <div class="clear"></div>
+        <md-card-content class="sinopsis">
+            <p>
+                {{InfoComponent.info.synopsis}}
+            </p>
+        </md-card-content>
+        <md-card-actions class="inicio">
+            <a href="/" md-button>VOLVER AL INICIO</a>
+        </md-card-actions>
+    </md-card>
+</section>

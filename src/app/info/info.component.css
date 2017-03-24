@@ -1,0 +1,41 @@
+.container{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sinopsis{
+    color: gray;
+    margin-top: 15px;
+}
+
+.info{
+    float: left;
+    color:gray;
+    margin-right: 50px;
+}
+.mainimg{
+    float:left;
+}
+
+md-icon{
+    height: 24px !important;
+}
+
+.download{
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+}
+
+.inicio{
+    font-weight: bold !important;
+    color: gray;
+}
+
+.chips{
+    padding: 10px;
+    width: 300px;
+}

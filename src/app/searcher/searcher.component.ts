@@ -28,7 +28,7 @@ export class SearcherComponent implements OnInit {
       error => this.errorMessage = <any>error
       );
   }
-
+  
   onKey(event: KeyboardEvent) {
     SearcherComponent.result = [];
     var count = 1;

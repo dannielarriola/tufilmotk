@@ -2,25 +2,21 @@ md-card{
     display:inline-block;
     margin-left: 2%;
     margin-top: 10px;
+    padding-bottom: 0;
+    padding-top: 10px;
 }
+
 .container{
     width:80%;
     margin:0 auto;
     padding-bottom: 200px;
 }
+
 .descargas{
     color:white;
 }
-md-card-title{
-    font-weight: bold;
-    color:rgba(0,0,0,.7);
-}
-md-card-header{
-    height: 20px;
-}
 
-.rating{
-    bottom:7px;
-    font-size: 1em;
-    color: rgba(0, 0, 0, 0.7) !important;
+md-icon.rate{
+    font-size: 14px;
+    width: 15px;
 }

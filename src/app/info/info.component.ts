@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DbService } from '../db.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'tf-info',
@@ -8,20 +10,41 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InfoComponent implements OnInit, OnDestroy {
   private sub: any;
-  id: number;  
-  title: string;
+  static id: number;
+  static title: string;
+  static info: any = {};
+  datajson = {};
+  dataloaded = false;
+  InfoComponent = InfoComponent;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private dbservice: DbService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.id = +params['id'];
-      this.title = params['title'];
+      InfoComponent.id = +params['id'];
+      InfoComponent.title = params['title'];
+      this.getRecord();
     });
-    
+
   }
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+
+  getRecord() {
+    this.dbservice.getData()
+      .subscribe(
+      datajson => {
+        _.forEach(datajson, function (item: any) {
+          if (item.id == InfoComponent.id) {
+            InfoComponent.info = item;
+            console.log(item);
+            return false;
+          }
+        });
+      },
+
+    );
   }
 
 }

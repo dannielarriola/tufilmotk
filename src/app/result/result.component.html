@@ -1,24 +1,13 @@
 <section class='container'>
-<md-card fxFlex="23%" fxFlex.xs="98%" *ngFor="let item of SearcherComponent.result">
-  <a routerLink="/info/{{item.slug}}/{{item.id}}">
+<md-card [routerLink]="['/info', item.slug, item.id]" fxFlex="23%" class="pointer" fxFlex.xs="98%" *ngFor="let item of SearcherComponent.result">
   <md-card-header>
     <md-card-title>{{item.title.substr(0,20)}}</md-card-title>
+    <md-card-subtitle>
+        <md-icon class="rate">star_rate</md-icon>
+        <span>{{item.rating}}</span>     
+    </md-card-subtitle>
   </md-card-header>
   <img md-card-image mdTooltip="{{item.title_long}}" src="{{item.medium_cover_image}}">
-  <md-card-actions>
-    <a md-mini-fab class="descargas" [mdMenuTriggerFor]="menu"><md-icon>add</md-icon></a>
-    <md-menu #menu="mdMenu">
-      <a md-menu-item *ngFor="let torrent of item.torrents" href="{{torrent.url}}">
-        <md-icon>file_download</md-icon>
-        <span>Torrent {{torrent.quality}}</span>
-      </a>
-      <a md-menu-item href='//www.yifysubtitles.com/movie-imdb/{{item.imdb_code}}' target='_blank'>
-        <md-icon>subject</md-icon>
-        <span>Subtitulo</span>
-      </a>
-    </md-menu>
-    <span class="rating" md-button disabled>{{item.rating}}</span>
-  </md-card-actions>
-  </a>
+ 
 </md-card>
 </section>
