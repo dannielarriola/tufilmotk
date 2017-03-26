@@ -1,5 +1,5 @@
 <md-spinner *ngIf="!dataloaded"></md-spinner>
-<div *ngIf="dataloaded" class="flex-container" fxLayout="row" fxLayoutAlign="center center">
+<div *ngIf="dataloaded" class="flex-container buscador">
     <md-input-container fxFlex="80%">
         <input mdInput placeholder="Titulo" [(ngModel)]="SearcherComponent.typing" (keyup)="onKey($event)">
     </md-input-container>

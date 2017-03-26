@@ -1,7 +1,12 @@
 md-input-container{
     font-size: 1.5rem;
+    width: 60%;
 }
 
 md-spinner{
     margin: 0 auto;
+}
+
+.buscador{
+    text-align: center;
 }
