@@ -22,7 +22,7 @@
       "styles": [
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": ["ga.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
