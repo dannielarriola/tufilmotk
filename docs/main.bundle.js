@@ -167,7 +167,7 @@ var routes = [
         pathMatch: 'full'
     }
 ];
-var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(routes);
+var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(routes, { useHash: true });
 //# sourceMappingURL=app.routes.js.map
 
 /***/ }),
