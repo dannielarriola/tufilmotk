@@ -7,15 +7,15 @@ import { InfoComponent } from './info/info.component';
 // Route Configuration
 export const routes: Routes = [
   {
-    path: 'tufilmotk/info/:title/:id',
+    path: 'info/:title/:id',
     component: InfoComponent
   },
   {
-    path: 'tufilmotk',
+    path: 'home',
     component: HomeComponent
   },
   { path: '',
-    redirectTo: '/tufilmotk',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];

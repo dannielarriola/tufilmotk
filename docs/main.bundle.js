@@ -155,15 +155,15 @@ AppModule = __decorate([
 // Route Configuration
 var routes = [
     {
-        path: 'tufilmotk/info/:title/:id',
+        path: 'info/:title/:id',
         component: __WEBPACK_IMPORTED_MODULE_2__info_info_component__["a" /* InfoComponent */]
     },
     {
-        path: 'tufilmotk',
+        path: 'home',
         component: __WEBPACK_IMPORTED_MODULE_1__home_home_component__["a" /* HomeComponent */]
     },
     { path: '',
-        redirectTo: '/tufilmotk',
+        redirectTo: '/home',
         pathMatch: 'full'
     }
 ];
