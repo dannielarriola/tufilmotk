@@ -11,11 +11,11 @@ export const routes: Routes = [
     component: InfoComponent
   },
   {
-    path: 'tufilmotk/home',
+    path: 'tufilmotk',
     component: HomeComponent
   },
   { path: '',
-    redirectTo: 'tufilmotk/home',
+    redirectTo: '/tufilmotk',
     pathMatch: 'full'
   }
 ];
