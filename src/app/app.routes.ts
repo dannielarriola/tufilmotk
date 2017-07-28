@@ -1,21 +1,21 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
-import { InfoComponent }    from './info/info.component';
+import { InfoComponent } from './info/info.component';
 
 // Route Configuration
 export const routes: Routes = [
   {
-    path: 'info/:title/:id',
+    path: 'tufilmotk/info/:title/:id',
     component: InfoComponent
   },
   {
-    path: 'home',
+    path: 'tufilmotk/home',
     component: HomeComponent
   },
   { path: '',
-    redirectTo: '/home',
+    redirectTo: 'tufilmotk/home',
     pathMatch: 'full'
   }
 ];
