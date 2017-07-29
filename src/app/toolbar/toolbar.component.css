@@ -5,3 +5,7 @@
 md-toolbar{
     margin-bottom: 20px;
 }
+
+.iconbtn.mat-button{
+    min-width: 0;
+}
