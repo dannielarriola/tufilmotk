@@ -159,11 +159,11 @@ var routes = [
         component: __WEBPACK_IMPORTED_MODULE_2__info_info_component__["a" /* InfoComponent */]
     },
     {
-        path: 'home',
+        path: '',
         component: __WEBPACK_IMPORTED_MODULE_1__home_home_component__["a" /* HomeComponent */]
     },
     { path: '',
-        redirectTo: '/home',
+        redirectTo: '/',
         pathMatch: 'full'
     }
 ];

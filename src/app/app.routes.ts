@@ -11,11 +11,11 @@ export const routes: Routes = [
     component: InfoComponent
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent
   },
   { path: '',
-    redirectTo: '/home',
+    redirectTo: '/',
     pathMatch: 'full'
   }
 ];
