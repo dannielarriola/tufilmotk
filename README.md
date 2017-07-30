@@ -4,5 +4,5 @@
 - [DEMO PROJECT](https://dannielarriola.github.io/tufilmotk)
 
 ```
-$ ng build --env=prod
+$ ng build --prod --aot
 ```
