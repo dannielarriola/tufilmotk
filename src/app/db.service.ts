@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DbService {
-  private urljson = 'movies.json?v=1.1'; 
+  private urljson = 'movies.json?v=1.1';
   constructor(private http: Http) { }
 
   getData() : Observable<any>{
@@ -18,7 +18,7 @@ export class DbService {
   private extractData(res: Response) {
     return res.json() || { };
   }
-  
+
   private handleError (error: Response | any) {
     let errMsg: string;
     if (error instanceof Response) {
